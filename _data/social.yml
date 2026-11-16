@@ -1,0 +1,35 @@
+email:
+  id: 'info@tanoka.studio'
+  href: 'mailto:'
+  title: 'Email'
+  fa-icon: 'fa-solid fa-envelope'
+
+twitter:
+  id: 'tanokastudio'
+  href: 'https://www.twitter.com/'
+  title: 'Twitter'
+  fa-icon: 'fa-brands fa-twitter'
+
+instagram:
+  id: 'tanokastudio'
+  href: 'https://www.instagram.com/'
+  title: 'Instagram'
+  fa-icon: 'fa-brands fa-instagram'
+
+tiktok:
+  id: 'tanokastudio'
+  href: 'https://www.tiktok.com/'
+  title: 'TikTok'
+  fa-icon: 'fa-brands fa-tiktok'
+
+reddit:
+  id: 'tanokastudio'
+  href: 'https://www.reddit.com/'
+  title: 'Reddit'
+  fa-icon: 'fa-brands fa-reddit'
+
+github:
+  id: 'tanoka-studio'
+  href: 'https://github.com/'
+  title: 'GitHub'
+  fa-icon: 'fa-brands fa-github'
