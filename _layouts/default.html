@@ -10,9 +10,46 @@
   </head>
   {% include header.html %}
   <body>
-    <content>
+    <div style="margin: 0; padding: 0;">
       {{ content }}
-    </content>
+    </div>
   </body>
   {% include footer.html %}
+  <script>
+    // Source - https://stackoverflow.com/a/7717572
+// Posted by Joseph Silber, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-11-17, License - CC BY-SA 3.0
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+  </script>
+  <script>
+    const header = document.getElementById('sticky-header');
+const firstElement = document.getElementById('hero');
+
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    // If the first element is NOT intersecting (scrolled past), show the header
+    if (!entry.isIntersecting) {
+      header.classList.add('visible');
+    } else {
+      header.classList.remove('visible');
+    }
+  },
+  {
+    root: null, // Uses the browser viewport
+    threshold: 0 // Triggers as soon as 0% of the hero is visible
+  }
+);
+
+observer.observe(firstElement);
+  </script>
 </html>

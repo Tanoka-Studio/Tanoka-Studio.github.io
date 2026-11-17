@@ -1,3 +1,54 @@
-.current {
-  color: green;
+/* Main SCSS file for the project */
+
+/* Color Palette for Tanoka Studio */
+$primary-color: #c6a76b;
+$secondary-color: #77736b;
+$success-color: #71856a;
+$danger-color: #a64b4b;
+$warning-color: #c49a52;
+$info-color: #718795;
+
+$background-color: #121212;
+$text-color: #e6e1d8;
+$font-family: 'Roboto', sans-serif;
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
 }
+
+html, body {
+  height: 100%;
+}
+
+.current {
+  color: $primary-color;
+}
+
+#sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 1000;
+
+  /* Hidden state */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Visible state */
+#sticky-header.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+

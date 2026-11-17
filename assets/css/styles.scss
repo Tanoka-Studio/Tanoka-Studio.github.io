@@ -3,7 +3,6 @@
 
 @import "main";
 html {
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
@@ -12,25 +11,44 @@ html {
 body {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
-header {
+/*header {
     background-color: rgb(46, 46, 46);
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-}
-content {
+    position: absolute;
+    top: 0;
     display: block;
-    margin: 0 auto;
-    max-width: 800px;
+    padding: 10px 20px;
+    width: stretch;
+    max-width:100%;
+    height: 10vh;
+}*/
+.card {
+    display: block;
+    margin: 15px auto;
+    max-width: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     background-color: #f5f5f5;
+    color: $background-color;
+    border-radius: 5px;
+    /* Center the content vertically */
+    justify-content: center;
+}
+
+hero{
+    width: stretch;
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    color: $background-color;
+
+    /* Center the content vertically */
+    justify-content: center;
+    height: 100vh;
 }
 
 footer {
@@ -38,10 +56,12 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 20px;
-    position: fixed;
+    display: box;
+    position: relative;
     bottom: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    width: stretch;
 }
 
 socials {
@@ -52,4 +72,11 @@ socials {
     color: #333;
     text-decoration: none;
     text-align: center;
+}
+
+/* Game display, grid vertical half */
+.game{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 }
